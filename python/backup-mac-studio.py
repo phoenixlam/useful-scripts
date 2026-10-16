@@ -35,6 +35,7 @@ def run_backup():
             "rsync",
             "-av",
             "--delete",
+            "--exclude=._*",                # Exclude Mac resource fork files in external SSD 
             "--exclude=.DS_Store",          # Exclude Mac temporary Finder files
             "--exclude=Library/Caches",     # Exclude temporary app caches
             "--exclude=*.dmg",                # Exclude disk image files
